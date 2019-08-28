@@ -1,0 +1,21 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: redistest
+  redis:
+    cluster:
+      nodes: 132.80.238.13:6410,132.80.238.14:6410,132.80.238.15:6410,132.80.238.13:6411,132.80.238.14:6411,132.80.238.15:6411
+    password: B6.gsg312
+    lettuce:
+      pool:
+        max-active: 100
+        min-idle: 1
+        max-idle: 100
+        max-wait: -1ms
+
+
+#cronjob
+job: 0 0/10 * * * ? #每10分钟执行一次
+
+

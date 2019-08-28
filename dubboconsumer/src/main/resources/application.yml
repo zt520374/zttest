@@ -1,0 +1,25 @@
+dubbo:
+  application:
+    name:  dubbo-consumer
+  registry:
+    address: 172.18.231.8:32181
+    # 读者请换成自己的zookeeperip
+    protocol: zookeeper
+    check: false
+  monitor:
+    protocol: register
+  consumer:
+    check:  false
+    timeout: 3000
+
+server:
+  port: 8062
+spring:
+  application:
+    name: dubbo-consumer
+  zipkin:
+    base-url: http://172.18.231.8:30086
+  sleuth:
+    sampler:
+      probability: 1.0
+
